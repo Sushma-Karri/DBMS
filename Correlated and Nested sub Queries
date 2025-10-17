@@ -1,0 +1,42 @@
+Student
+| Student_ID | Name    | Dept | Marks |
+| ---------- | ------- | ---- | ----- |
+| 101        | Alice   | CSE  | 89    |
+| 102        | Bob     | ECE  | 76    |
+| 103        | Charlie | IT   | 82    |
+| 104        | David   | MECH | 91    |
+| 105        | Eva     | CSE  | 95    |
+
+-- 1️⃣ Nested Query: Students who scored more than overall average
+SELECT Name, Marks
+FROM STUDENT
+WHERE Marks > (
+    SELECT AVG(Marks) FROM STUDENT
+);
+
+-- 2️⃣ Nested Query: Students in CSE with marks greater than average of CSE
+SELECT Name, Marks
+FROM STUDENT
+WHERE Marks > (
+    SELECT AVG(Marks)
+    FROM STUDENT
+    WHERE Dept = 'CSE'
+);
+
+-- 3️⃣ Correlated Query: Students whose marks are greater than average of their Dept
+SELECT Name, Dept, Marks
+FROM STUDENT S1
+WHERE Marks > (
+    SELECT AVG(Marks)
+    FROM STUDENT S2
+    WHERE S2.Dept = S1.Dept
+);
+
+-- 4️⃣ Correlated Query: Find students who scored highest in their department
+SELECT Name, Dept, Marks
+FROM STUDENT S1
+WHERE Marks = (
+    SELECT MAX(Marks)
+    FROM STUDENT S2
+    WHERE S2.Dept = S1.Dept
+);
