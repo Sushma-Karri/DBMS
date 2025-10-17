@@ -1,3 +1,12 @@
+| Student_ID | Name    | Age | Gender | Department | Marks |
+| ---------- | ------- | --- | ------ | ---------- | ----- |
+| 101        | Alice   | 19  | F      | CSE        | 89    |
+| 102        | Bob     | 20  | M      | ECE        | 76    |
+| 103        | Charlie | 18  | M      | EEE        | 82    |
+| 104        | David   | 21  | M      | MECH       | 91    |
+| 105        | Eva     | 19  | F      | IT         | 95    |
+| 106        | Frank   | 22  | M      | CIVIL      | 72    |
+
 -- 1️⃣ INSERT new student
 INSERT INTO STUDENT VALUES (107, 'Grace', 20, 'F', 'CSE', 88);
 
