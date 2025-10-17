@@ -1,0 +1,34 @@
+-- 1️⃣ INSERT new student
+INSERT INTO STUDENT VALUES (107, 'Grace', 20, 'F', 'CSE', 88);
+
+-- 2️⃣ UPDATE Marks for Bob
+UPDATE STUDENT
+SET Marks = 90
+WHERE Name = 'Bob';
+
+-- 3️⃣ DELETE David's record
+DELETE FROM STUDENT
+WHERE Student_ID = 104;
+
+-- 4️⃣ SELECT all students
+SELECT * FROM STUDENT;
+
+-- 5️⃣ SELECT specific columns
+SELECT Name, Marks FROM STUDENT;
+
+-- 6️⃣ SELECT with condition (Marks > 85)
+SELECT * FROM STUDENT
+WHERE Marks > 85;
+
+-- 7️⃣ SELECT with ORDER BY Marks DESC
+SELECT * FROM STUDENT
+ORDER BY Marks DESC;
+
+-- 8️⃣ UPDATE multiple columns for Charlie
+UPDATE STUDENT
+SET Department = 'CSE', Age = 21
+WHERE Name = 'Charlie';
+
+-- 9️⃣ DELETE students with Marks < 80
+DELETE FROM STUDENT
+WHERE Marks < 80;
