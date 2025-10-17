@@ -1,0 +1,28 @@
+-- 1️⃣ CURRENT_DATE: Get today's date
+SELECT CURRENT_DATE AS Today_Date;
+
+-- 2️⃣ YEAR: Get year from a given date
+SELECT YEAR('2005-03-17') AS Birth_Year;
+
+-- 3️⃣ MONTH: Get month from a given date
+SELECT MONTH('2005-03-17') AS Birth_Month;
+
+-- 4️⃣ DAY: Get day from a given date
+SELECT DAY('2005-03-17') AS Birth_Day;
+
+-- 5️⃣ DATE_ADD: Add 5 days to a given date
+SELECT DATE_ADD('2005-03-17', INTERVAL 5 DAY) AS New_Date;
+
+-- 6️⃣ DATE_SUB: Subtract 10 days from a given date
+SELECT DATE_SUB('2005-03-17', INTERVAL 10 DAY) AS Before_Date;
+
+-- 7️⃣ DATEDIFF: Difference in days between two dates
+SELECT DATEDIFF('2025-10-17', '2005-03-17') AS Days_Old;
+
+-- 8️⃣ EXTRACT: Extract year/month/day from a date
+SELECT EXTRACT(YEAR FROM '2005-03-17') AS Year_Only,
+       EXTRACT(MONTH FROM '2005-03-17') AS Month_Only,
+       EXTRACT(DAY FROM '2005-03-17') AS Day_Only;
+
+-- 9️⃣ NOW / CURRENT_TIMESTAMP: Current date and time
+SELECT NOW() AS Current_DateTime;
