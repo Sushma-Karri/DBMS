@@ -1,0 +1,30 @@
+-- 1️⃣ ROUND: Round number to nearest integer
+SELECT ROUND(89.6, 0) AS Rounded_Value;
+
+-- 2️⃣ CEIL / CEILING: Round up
+SELECT CEIL(89.1) AS Ceil_Value;
+
+-- 3️⃣ FLOOR: Round down
+SELECT FLOOR(89.9) AS Floor_Value;
+
+-- 4️⃣ ABS: Absolute value
+SELECT ABS(-72) AS Absolute_Value;
+
+-- 5️⃣ POWER / POW: Raise to a power
+SELECT POWER(5, 3) AS Power_Value;  -- 5^3 = 125
+
+-- 6️⃣ SQRT: Square root
+SELECT SQRT(144) AS Square_Root;
+
+-- 7️⃣ MOD: Modulus (remainder)
+SELECT MOD(17, 5) AS Mod_Value;  -- 17 % 5 = 2
+
+-- 8️⃣ EXP: Exponential e^x
+SELECT EXP(2) AS Exponential_Value;
+
+-- 9️⃣ LOG / LN: Natural logarithm
+SELECT LOG(10) AS Log10_Value;   -- base 10
+SELECT LN(2.71828) AS Ln_Value;  -- natural log
+
+-- 🔟 TRUNCATE: Truncate decimal part
+SELECT TRUNCATE(89.987, 1) AS Truncated_Value; -- 89.9
