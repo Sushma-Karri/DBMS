@@ -1,0 +1,43 @@
+| Student_ID | Name    | Age | Gender | Department | Marks |
+| ---------- | ------- | --- | ------ | ---------- | ----- |
+| 101        | Alice   | 19  | F      | CSE        | 89    |
+| 102        | Bob     | 20  | M      | ECE        | 76    |
+| 103        | Charlie | 18  | M      | EEE        | 82    |
+| 104        | David   | 21  | M      | MECH       | 91    |
+| 105        | Eva     | 19  | F      | IT         | 95    |
+| 106        | Frank   | 22  | M      | CIVIL      | 72    |
+
+-- 1️⃣ UPPER: Convert name to uppercase
+SELECT Name, UPPER(Name) AS Uppercase_Name
+FROM STUDENT;
+
+-- 2️⃣ LOWER: Convert name to lowercase
+SELECT Name, LOWER(Name) AS Lowercase_Name
+FROM STUDENT;
+
+-- 3️⃣ LENGTH / LEN: Get length of name
+SELECT Name, LENGTH(Name) AS Name_Length
+FROM STUDENT;
+
+-- 4️⃣ CONCAT: Combine Name and Department
+SELECT CONCAT(Name, ' - ', Department) AS Name_Dept
+FROM STUDENT;
+
+-- 5️⃣ SUBSTRING / SUBSTR: First 3 letters of Name
+SELECT Name, SUBSTRING(Name, 1, 3) AS Short_Name
+FROM STUDENT;
+
+-- 6️⃣ TRIM / LTRIM / RTRIM: Remove spaces
+SELECT Name, TRIM(Name) AS Trimmed_Name FROM STUDENT;
+
+-- 7️⃣ REPLACE: Replace a character in Name
+SELECT Name, REPLACE(Name, 'a', '@') AS Replaced_Name
+FROM STUDENT;
+
+-- 8️⃣ LEFT / RIGHT: Get leftmost or rightmost characters
+SELECT Name, LEFT(Name, 2) AS Left_Chars, RIGHT(Name, 2) AS Right_Chars
+FROM STUDENT;
+
+-- 9️⃣ INSTR / POSITION: Find position of character
+SELECT Name, INSTR(Name, 'a') AS Position_a
+FROM STUDENT;
