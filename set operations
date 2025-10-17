@@ -1,0 +1,34 @@
+table a
+| ID | Name    | Dept |
+| -- | ------- | ---- |
+| 1  | Alice   | CSE  |
+| 2  | Bob     | ECE  |
+| 3  | Charlie | IT   |
+
+table b
+| ID | Name    | Dept |
+| -- | ------- | ---- |
+| 2  | Bob     | ECE  |
+| 3  | Charlie | IT   |
+| 4  | David   | MECH |
+
+-- 1️⃣1 UNION: Combine both tables, remove duplicates
+SELECT * FROM TableA
+UNION
+SELECT * FROM TableB;
+
+-- 2️⃣ UNION ALL: Combine both tables, keep duplicates
+SELECT * FROM TableA
+UNION ALL
+SELECT * FROM TableB;
+
+-- 3️⃣ INTERSECT: Show common rows in both tables
+SELECT * FROM TableA
+INTERSECT
+SELECT * FROM TableB;
+
+-- 4️⃣ MINUS (EXCEPT): Show rows in TableA not in TableB
+SELECT * FROM TableA
+MINUS
+SELECT * FROM TableB;
+
