@@ -1,0 +1,27 @@
+CREATE TABLE STUDENT (
+    Student_ID INT PRIMARY KEY,
+    Name VARCHAR(50),
+    Age INT,
+    Gender CHAR(1),
+    Department VARCHAR(30),
+    Marks INT
+);
+
+INSERT INTO STUDENT VALUES (101, 'Alice', 19, 'F', 'CSE', 89);
+INSERT INTO STUDENT VALUES (102, 'Bob', 20, 'M', 'ECE', 76);
+INSERT INTO STUDENT VALUES (103, 'Charlie', 18, 'M', 'EEE', 82);
+INSERT INTO STUDENT VALUES (104, 'David', 21, 'M', 'MECH', 91);
+INSERT INTO STUDENT VALUES (105, 'Eva', 19, 'F', 'IT', 95);
+INSERT INTO STUDENT VALUES (106, 'Frank', 22, 'M', 'CIVIL', 72);
+
+SELECT * FROM STUDENT;
+
+| Student_ID | Name    | Age | Gender | Department | Marks |
+| ---------- | ------- | --- | ------ | ---------- | ----- |
+| 101        | Alice   | 19  | F      | CSE        | 89    |
+| 102        | Bob     | 20  | M      | ECE        | 76    |
+| 103        | Charlie | 18  | M      | EEE        | 82    |
+| 104        | David   | 21  | M      | MECH       | 91    |
+| 105        | Eva     | 19  | F      | IT         | 95    |
+| 106        | Frank   | 22  | M      | CIVIL      | 72    |
+
