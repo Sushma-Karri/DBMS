@@ -1,0 +1,77 @@
+create table dept(
+ 2  did int,
+ 3  dname varchar(10)
+ 4  );
+ Table created.
+ insert into dept(did,dname)
+ 2  values(1,'hr');
+ 1 row created.
+ insert into dept(did,dname)
+ 2  values(2,'it');
+ 1 row created.
+ insert into dept(did,dname)
+ 2  values(3,'finance');
+ 1 row created.
+ create table emp(
+ 2  empid int,
+ 3  empname varchar(10),
+ 4  did int
+ 5  );
+ Table created.
+ insert into emp(empid,empname,did)
+ 2  values(101,'alice',1);
+ 1 row created.
+ insert into emp(empid,empname,did)
+ 2  values(102,'bob',2);
+ 1 row created.
+  insert into emp(empid,empname,did)
+ 2  values(103,'charlie',null);
+ 1 row created.
+ insert into emp(empid,empname,did)
+ 2  values(104,'david',5);
+ 1 row created.
+select *
+  2  from dept
+  3  natural join emp;
+       DID DNAME           EMPID EMPNAME
+         1 hr                101 alice
+         2 it                102 bob
+ select*
+  2  from dept d,emp e
+  3  where d.did=e.did;
+       DID DNAME           EMPID EMPNAME           DID
+         1 hr                101 alice               1
+         2 it                102 bob                 2
+ select*
+  2  from dept d
+  3  join emp e
+  4  on d.did=e.did;
+       DID DNAME           EMPID EMPNAME           DID
+         1 hr                101 alice               1
+         2 it                102 bob                 2
+select *
+  2  from dept d
+  3  left join emp e
+  4  on d.did=e.did;
+       DID DNAME           EMPID EMPNAME           DID
+         1 hr                101 alice               1
+         2 it                102 bob                 2
+         3 finance
+ select *
+  2  from dept d
+  3  right join emp e
+  4  on d.did=e.did;
+       DID DNAME           EMPID EMPNAME           DID
+         1 hr                101 alice               1
+         2 it                102 bob                 2
+                             103 charlie
+                             104 david               5
+ select *from dept d
+  2  full join emp e
+  3  on d.did=e.did;
+       DID DNAME           EMPID EMPNAME           DID
+         1 hr                101 alice               1
+         2 it                102 bob                 2
+         3 finance
+                             103 charlie
+                             104 david               5
