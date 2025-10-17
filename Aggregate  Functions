@@ -1,0 +1,48 @@
+| Student_ID | Name    | Age | Gender | Department | Marks |
+| ---------- | ------- | --- | ------ | ---------- | ----- |
+| 101        | Alice   | 19  | F      | CSE        | 89    |
+| 102        | Bob     | 20  | M      | ECE        | 76    |
+| 103        | Charlie | 18  | M      | EEE        | 82    |
+| 104        | David   | 21  | M      | MECH       | 91    |
+| 105        | Eva     | 19  | F      | IT         | 95    |
+| 106        | Frank   | 22  | M      | CIVIL      | 72    |
+
+-- 🔹 Aggregate Functions Examples
+-- 10️⃣ Total students
+SELECT COUNT(*) AS Total_Students FROM STUDENT;
+
+-- 11️⃣ Total marks
+SELECT SUM(Marks) AS Total_Marks FROM STUDENT;
+
+-- 12️⃣ Average marks
+SELECT AVG(Marks) AS Avg_Marks FROM STUDENT;
+
+-- 13️⃣ Highest marks
+SELECT MAX(Marks) AS Highest_Marks FROM STUDENT;
+
+-- 14️⃣ Lowest marks
+SELECT MIN(Marks) AS Lowest_Marks FROM STUDENT;
+
+-- 🔹 GROUP BY Examples
+-- 15️⃣ Average marks per Department
+SELECT Department, AVG(Marks) AS Avg_Marks
+FROM STUDENT
+GROUP BY Department;
+
+-- 16️⃣ Count of students per Department
+SELECT Department, COUNT(*) AS Total_Students
+FROM STUDENT
+GROUP BY Department;
+
+-- 🔹 HAVING Examples
+-- 17️⃣ Departments with average marks > 85
+SELECT Department, AVG(Marks) AS Avg_Marks
+FROM STUDENT
+GROUP BY Department
+HAVING AVG(Marks) > 85;
+
+-- 18️⃣ Departments with more than 1 student
+SELECT Department, COUNT(*) AS Total_Students
+FROM STUDENT
+GROUP BY Department
+HAVING COUNT(*) > 1;
